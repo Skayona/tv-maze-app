@@ -1,0 +1,19 @@
+:host {
+  ::ng-deep .ui-tabmenu .ui-tabmenu-nav {
+    background: transparent;
+  }
+}
+
+.show {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+p-tabMenu {
+  display: block;
+}
+
+h2,
+p-tabMenu {
+  margin-bottom: 24px;
+}

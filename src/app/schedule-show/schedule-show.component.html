@@ -1,0 +1,17 @@
+<div class="show">
+  <div>
+    <img [src]="scheduledShow.show.image.medium" [alt]="scheduledShow.name" width="210" />
+    <br />
+    <p><a [routerLink]="['show', scheduledShow.show.id]" pButton label="More about show"></a></p>
+  </div>
+  <div class="show-details">
+    <h3>{{ scheduledShow.show.name }}</h3>
+    <p><small> {{ scheduledShow.name }}</small></p>
+    <br />
+    <p><strong>Air time</strong>: {{ scheduledShow.airtime }}</p>
+    <p *ngIf="scheduledShow.season"><strong>Season</strong>: {{ scheduledShow.season }}</p>
+    <p *ngIf="scheduledShow.number"><strong>Episode</strong>: {{ scheduledShow.number }}</p>
+    <div [innerHTML]="scheduledShow.show.summary"></div>
+    <p *ngIf="scheduledShow.show.officialSite"><strong>Official site</strong>: <a [href]="scheduledShow.show.officialSite" target="_blank">{{ scheduledShow.show.officialSite }}</a></p>
+  </div>
+</div>

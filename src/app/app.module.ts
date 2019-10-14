@@ -1,17 +1,60 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
+import {TabMenuModule} from 'primeng/tabmenu';
+import {TableModule} from 'primeng/table';
+
+import { MainPageComponent } from './main-page/main-page.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ScheduleShowComponent } from './schedule-show/schedule-show.component';
+import { RecomendedShowComponent } from './recomended-show/recomended-show.component';
+import { ShowItemComponent } from './show-item/show-item.component';
+import { ShowPageComponent } from './show-page/show-page.component';
+import { SeasonPageComponent } from './season-page/season-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { UserPageComponent } from './user-page/user-page.component';
+import { EpisodePageComponent } from './episode-page/episode-page.component';
+import { EpisodesPageComponent } from './episodes-page/episodes-page.component';
+import { MainShowInfoComponent } from './main-show-info/main-show-info.component';
+import { EpisodeListComponent } from './episode-list/episode-list.component';
+
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainPageComponent,
+    HeaderComponent,
+    FooterComponent,
+    ScheduleShowComponent,
+    RecomendedShowComponent,
+    ShowItemComponent,
+    ShowPageComponent,
+    SeasonPageComponent,
+    LoginPageComponent,
+    UserPageComponent,
+    EpisodePageComponent,
+    EpisodesPageComponent,
+    MainShowInfoComponent,
+    EpisodeListComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ButtonModule,
+    CardModule,
+    TabMenuModule,
+    TableModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

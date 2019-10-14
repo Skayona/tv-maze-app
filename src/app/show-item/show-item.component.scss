@@ -1,0 +1,12 @@
+a {
+  display: block;
+  height: 100%;
+}
+
+::ng-deep .ui-card-title {
+  font-size: 14px;
+}
+
+::ng-deep .ui-card {
+  height: 100%;
+}

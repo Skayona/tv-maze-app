@@ -1,0 +1,19 @@
+<div class="show" *ngIf="(show$ | async) as show">
+  <p-card>
+    <div class="about">
+      <div><img [src]="show.image.medium" [alt]="show.name" /></div>
+      <div [innerHTML]="show.summary"></div>
+    </div>
+  </p-card>
+
+  <p-card>
+    <div class="info">
+      <h3>Show info</h3>
+      <p><strong>Schedule:</strong> {{ show.schedule.days.join(', ') }} at {{ show.schedule.time }}</p>
+      <p><strong>Status:</strong> {{ show.status }}</p>
+      <p><strong>Show Type:</strong> {{ show.type }}</p>
+      <p><strong>Genres:</strong> {{ show.genres.join(' | ')}}</p>
+      <p><strong>Official site: </strong><a [href]="show.officialSite" target="_blank">{{ show.officialSite }}</a></p>
+    </div>
+  </p-card>
+</div>

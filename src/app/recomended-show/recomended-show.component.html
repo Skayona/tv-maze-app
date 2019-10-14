@@ -1,0 +1,20 @@
+<div class="show">
+  <h3>{{ show.name }}</h3>
+
+  <div class="show-details">
+    <div class="show-summary">
+      <div [innerHTML]="show.summary"></div>
+      <p><a [routerLink]="['show', show.id]" pButton label="More about show"></a></p>
+    </div>
+    <div class="show-img">
+      <img [src]="show.image.medium" [alt]="show.name" />
+    </div>
+    <div class="show-info">
+      <p><strong>Runtime</strong>: {{ show.runtime }} minutes</p>
+      <p><strong>Status</strong>: {{ show.status }}</p>
+      <p><strong>Show Type</strong>: {{ show.type }}</p>
+      <p><strong>Genres</strong>: {{ show.genres.join(', ') }}</p>
+      <p><strong>Official site</strong>: <a href="show.officialSite" target="_blank" rel="noopener">{{ show.officialSite }}</a></p>
+    </div>
+  </div>
+</div>

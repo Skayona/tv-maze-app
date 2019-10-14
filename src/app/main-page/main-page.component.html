@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="main-page">
+    <div *ngIf="(scheduledShow$ | async) as scheduledShow">
+      <h2>Next show</h2>
+      <p-card>
+        <app-schedule-show
+          [scheduledShow]="scheduledShow"
+        ></app-schedule-show>
+      </p-card>
+    </div>
+
+    <div *ngIf="(reccomendedShow$ | async) as reccomendedShow">
+      <h2>TV Maze Reccomends</h2>
+      <p-card>
+        <app-recomended-show
+          [show]="reccomendedShow"
+        ></app-recomended-show>
+      </p-card>
+    </div>
+
+    <div>
+      <h2>Last visited</h2>
+    </div>
+
+
+    <div *ngIf="(randomGenreShows$ | async) as randomGenreShows">
+      <h2>{{ randomGenre }}</h2>
+      <div class="show-list">
+        <app-show-item *ngFor="let show of randomGenreShows"
+          [show]="show"
+        ></app-show-item>
+        <p *ngIf="!randomGenreShows.length">No shows</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>

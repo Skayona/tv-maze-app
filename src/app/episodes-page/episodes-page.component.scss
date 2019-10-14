@@ -1,0 +1,13 @@
+:host {
+  p-card {
+    display: block;
+  }
+
+  p-card+p-card {
+    margin-top: 24px;
+  }
+}
+
+h2 {
+  margin-bottom: 16px;
+}
