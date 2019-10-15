@@ -7,7 +7,7 @@
       <p><a [routerLink]="['show', show.id]" pButton label="More about show"></a></p>
     </div>
     <div class="show-img">
-      <img [src]="show.image.medium" [alt]="show.name" />
+      <img [src]="show?.image?.medium" [alt]="show.name" />
     </div>
     <div class="show-info">
       <p><strong>Runtime</strong>: {{ show.runtime }} minutes</p>

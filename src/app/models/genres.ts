@@ -15,5 +15,4 @@ export enum Genres {
   'thriller',
   'travel',
   'war',
-  'western'
 }

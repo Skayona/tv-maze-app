@@ -1,6 +1,6 @@
 <div class="show">
   <div>
-    <img [src]="scheduledShow.show.image.medium" [alt]="scheduledShow.name" width="210" />
+    <img [src]="scheduledShow.show?.image?.medium" [alt]="scheduledShow.name" width="210" />
     <br />
     <p><a [routerLink]="['show', scheduledShow.show.id]" pButton label="More about show"></a></p>
   </div>

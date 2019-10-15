@@ -29,24 +29,57 @@ export class ShowService {
 export class ShowPageComponent implements OnInit {
   show$: Observable<IShow>;
 
-  items: MenuItem[];
+  menuItems: MenuItem[];
 
   constructor(
     private tvMazeService: TvMazeService,
     private activatedRoute: ActivatedRoute,
     private showService: ShowService
   ) {
-    this.items = [
+    this.menuItems = [
       {label: 'Main', routerLink: 'main'},
       {label: 'Episodes', routerLink: 'episodes'}
     ];
-  }
 
-  ngOnInit() {
-    this.show$ = this.activatedRoute.params.pipe(
-      switchMap(({ showId }) => this.tvMazeService.getShow(showId)),
-      tap((show) => this.showService.addData(show))
+    this.show$ = activatedRoute.params.pipe(
+      switchMap(({ showId }) => tvMazeService.getShow(showId)),
+      tap((show) => {
+        showService.addData(show);
+        this.setLastVisitedShowList(show);
+      })
     );
   }
+
+  get lastVisitedShowList(): IShow[] {
+    const lastVisitedShowList = window.localStorage.getItem('tvMaze-last-visited');
+    return JSON.parse(lastVisitedShowList);
+  }
+
+  setLastVisitedShowList(show: IShow) {
+    const lastVisitedShow = {
+      id: show.id,
+      name: show.name,
+      image: show.image,
+      rating: show.rating
+    };
+
+    let lastVisitedShowList = this.lastVisitedShowList || [];
+
+    lastVisitedShowList = lastVisitedShowList.reduce((res, visitedShow) => {
+      if (res.find((resSHow) => resSHow.id === visitedShow.id)) {
+        return res;
+      }
+
+      return [...res, visitedShow];
+    }, [lastVisitedShow]);
+
+    if (lastVisitedShowList.length > 6) {
+      lastVisitedShowList.pop();
+    }
+
+    window.localStorage.setItem('tvMaze-last-visited', JSON.stringify(lastVisitedShowList));
+  }
+
+  ngOnInit() { }
 
 }

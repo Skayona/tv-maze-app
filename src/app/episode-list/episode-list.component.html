@@ -14,7 +14,7 @@
     <tr>
       <td>{{ episode.number }}</td>
       <td>{{ episode.airdate | date: 'dd.MM.yyyy' }}</td>
-      <td><a [routerLink]="['/', 'episode', episode.id]" >{{ episode.name }}</a></td>
+      <td><a [routerLink]="['..', 'episode', episode.id]" >{{ episode.name }}</a></td>
     </tr>
   </ng-template>
 </p-table>

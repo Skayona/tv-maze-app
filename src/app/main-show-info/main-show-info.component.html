@@ -1,7 +1,7 @@
 <div class="show" *ngIf="(show$ | async) as show">
   <p-card>
     <div class="about">
-      <div><img [src]="show.image.medium" [alt]="show.name" /></div>
+      <div><img [src]="show?.image?.medium" [alt]="show.name" /></div>
       <div [innerHTML]="show.summary"></div>
     </div>
   </p-card>

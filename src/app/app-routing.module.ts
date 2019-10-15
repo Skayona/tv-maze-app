@@ -46,20 +46,20 @@ const routes: Routes = [{
       data: {
         breadcrumbs: 'Episodes'
       }
+    }, {
+      path: 'season/:seasonId',
+      component: SeasonPageComponent,
+      data: {
+        breadcrumbs: 'Season'
+      }
+    }, {
+      path: 'episode/:episodeId',
+      component: EpisodePageComponent,
+      data: {
+        breadcrumbs: 'Episode'
+      }
     }
   ]
-}, {
-  path: 'season/:seasonId',
-  component: SeasonPageComponent,
-  data: {
-    breadcrumbs: 'Season'
-  }
-}, {
-  path: 'episode/:episodeId',
-  component: EpisodePageComponent,
-  data: {
-    breadcrumbs: 'Episode'
-  }
 }];
 
 @NgModule({

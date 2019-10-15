@@ -1,7 +1,7 @@
 <a [routerLink]="['show', show.id]">
   <p-card [header]="show.name" [subheader]="'Rating: ' + (show.rating.average || '-')">
     <p-header>
-      <img [src]="show.image.medium" [alt]="show.name">
+      <img [src]="show?.image?.medium" [alt]="show.name">
     </p-header>
   </p-card>
 </a>

@@ -1,7 +1,22 @@
 <header>
   <div class="container">
-    <a [routerLink]="['./']" class="logo">
-      <img src="assets/tvm-header-logo.png" alt="TVmaze" width="158" height="50" />
-    </a>
+    <div class="header">
+      <a [routerLink]="['./']" class="logo">
+        <img src="assets/tvm-header-logo.png" alt="TVmaze" width="158" height="50" />
+      </a>
+
+      <div class="search">
+        <div class="ui-inputgroup">
+          <input type="text" pInputText placeholder="Search shows">
+          <button pButton type="button" icon="pi pi-search" class="ui-button-warn"></button>
+        </div>
+      </div>
+
+      <div class="login">
+        <a [routerLink]="['login']">Login</a>
+        <!-- <a [routerLink]="['user']">Cabinet</a> -->
+      </div>
+    </div>
   </div>
+
 </header>

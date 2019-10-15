@@ -19,15 +19,9 @@ export class EpisodesPageComponent implements OnInit {
   constructor(
     private showService: ShowService,
     private tvMazeService: TvMazeService
-  ) { }
-
-  getEpisodesInSeason(season: number): IEpisode[] {
-    return this.episodes.filter((episode) => episode.season === season);
-  }
-
-  ngOnInit() {
-    this.episodes$ = this.showService.show$.pipe(
-      switchMap(({ id }) => this.tvMazeService.getEpisodes(id)),
+  ) {
+    this.episodes$ = showService.show$.pipe(
+      switchMap(({ id }) => tvMazeService.getEpisodes(id)),
       map((episodes) => episodes.reverse()),
       tap((episodes) => this.episodes = episodes)
     );
@@ -40,4 +34,10 @@ export class EpisodesPageComponent implements OnInit {
       })
     );
   }
+
+  getEpisodesInSeason(season: number): IEpisode[] {
+    return this.episodes.filter((episode) => episode.season === season);
+  }
+
+  ngOnInit() { }
 }

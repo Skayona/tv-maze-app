@@ -18,8 +18,13 @@
       </p-card>
     </div>
 
-    <div>
+    <div *ngIf="lastVisitedShowList">
       <h2>Last visited</h2>
+      <div class="show-list">
+        <app-show-item *ngFor="let show of lastVisitedShowList"
+          [show]="show"
+        ></app-show-item>
+      </div>
     </div>
 
 

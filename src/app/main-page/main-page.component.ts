@@ -23,22 +23,10 @@ export class MainPageComponent implements OnInit {
     private tvMazeService: TvMazeService
   ) {
     this.reccomendedShowId = 6771;
-  }
 
-  get showDate(): string {
-    const today = new Date();
-    return `${ today.getFullYear() }-${ today.getMonth() + 1 }-${ today.getDate() }`;
-  }
-
-  randomInteger(min, max) {
-    const rand = min - 0.5 + Math.random() * (max - min + 1);
-    return Math.round(rand);
-  }
-
-  ngOnInit() {
-    this.scheduledShow$ = this.tvMazeService.getScheduledShow(this.showDate);
-    this.reccomendedShow$ = this.tvMazeService.getReccomendedShow(this.reccomendedShowId);
-    this.randomGenreShows$ = this.tvMazeService.getscheduledAll().pipe(
+    this.scheduledShow$ = tvMazeService.getScheduledShow(this.showDate);
+    this.reccomendedShow$ = tvMazeService.getReccomendedShow(this.reccomendedShowId);
+    this.randomGenreShows$ = tvMazeService.getscheduledAll().pipe(
       map((shows) => {
         const maxIndex = Object.keys(Genres).filter((key) => key === '0' || Number(key)).length;
         const genreIndex = this.randomInteger(0, maxIndex);
@@ -60,4 +48,21 @@ export class MainPageComponent implements OnInit {
       })
     );
   }
+
+  get showDate(): string {
+    const today = new Date();
+    return `${ today.getFullYear() }-${ today.getMonth() + 1 }-${ today.getDate() }`;
+  }
+
+  get lastVisitedShowList(): IShow[] {
+    const lastVisitedShowList = window.localStorage.getItem('tvMaze-last-visited');
+    return JSON.parse(lastVisitedShowList);
+  }
+
+  randomInteger(min, max) {
+    const rand = min - 0.5 + Math.random() * (max - min + 1);
+    return Math.round(rand);
+  }
+
+  ngOnInit() { }
 }
