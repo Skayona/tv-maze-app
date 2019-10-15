@@ -1,3 +1,5 @@
+import { IShow } from './show';
+
 export interface IEpisode {
   id: number;
   url: string;
@@ -13,4 +15,7 @@ export interface IEpisode {
     original: string;
   };
   summary: string;
+  _embedded?: {
+    show: IShow;
+  };
 }

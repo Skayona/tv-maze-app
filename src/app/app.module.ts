@@ -17,13 +17,13 @@ import { ScheduleShowComponent } from './schedule-show/schedule-show.component';
 import { RecomendedShowComponent } from './recomended-show/recomended-show.component';
 import { ShowItemComponent } from './show-item/show-item.component';
 import { ShowPageComponent } from './show-page/show-page.component';
-import { SeasonPageComponent } from './season-page/season-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { EpisodePageComponent } from './episode-page/episode-page.component';
 import { EpisodesPageComponent } from './episodes-page/episodes-page.component';
 import { MainShowInfoComponent } from './main-show-info/main-show-info.component';
 import { EpisodeListComponent } from './episode-list/episode-list.component';
+import { InfoCardComponent } from './info-card/info-card.component';
 
 
 
@@ -37,13 +37,13 @@ import { EpisodeListComponent } from './episode-list/episode-list.component';
     RecomendedShowComponent,
     ShowItemComponent,
     ShowPageComponent,
-    SeasonPageComponent,
     LoginPageComponent,
     UserPageComponent,
     EpisodePageComponent,
     EpisodesPageComponent,
     MainShowInfoComponent,
     EpisodeListComponent,
+    InfoCardComponent,
   ],
   imports: [
     BrowserModule,

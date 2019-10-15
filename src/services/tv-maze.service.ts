@@ -35,15 +35,19 @@ export class TvMazeService {
     );
   }
 
-  getReccomendedShow(id: number): Observable<IShow> {
-    return this.http.get<IShow>(`${ this.api }/shows/${ id }`);
+  getReccomendedShow(showId: number): Observable<IShow> {
+    return this.http.get<IShow>(`${ this.api }/shows/${ showId }`);
   }
 
-  getShow(id: number): Observable<IShow> {
-    return this.http.get<IShow>(`${ this.api }/shows/${ id }`);
+  getShow(showId: number): Observable<IShow> {
+    return this.http.get<IShow>(`${ this.api }/shows/${ showId }`);
   }
 
-  getEpisodes(id: number): Observable<IEpisode[]> {
-    return this.http.get<IEpisode[]>(`${ this.api }/shows/${ id }/episodes`);
+  getEpisodes(showId: number): Observable<IEpisode[]> {
+    return this.http.get<IEpisode[]>(`${ this.api }/shows/${ showId }/episodes`);
+  }
+
+  getEpisode(episodeId: number): Observable<IEpisode> {
+    return this.http.get<IEpisode>(`${ this.api }/episodes/${ episodeId }?embed=show`);
   }
 }

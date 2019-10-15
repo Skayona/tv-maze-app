@@ -1,1 +1,24 @@
-<p>episode-page works!</p>
+<div class="container">
+  <div class="show">
+    <h2>{{ show?.name }}</h2>
+
+    <app-info-card
+      *ngIf="episode"
+      [image]="episode?.image?.medium || 'assets/no-img.png'"
+      [name]="episode.name"
+      [summary]="episode.summary"
+      [title]="'Episode info'"
+    >
+      <p><strong>Name:</strong> {{ episode.name }} </p>
+      <p><strong>Season:</strong> {{ episode.season }} </p>
+      <p><strong>Numner:</strong> {{ episode.number }}</p>
+      <p><strong>Runtime:</strong> {{ episode.runtime }} m.</p>
+    </app-info-card>
+
+
+    <div class="nav" *ngIf="nextEpisode || prevEpisode">
+      <a *ngIf="prevEpisode" [routerLink]="['..', prevEpisode]"> << Prev Episode</a>
+      <a *ngIf="nextEpisode" [routerLink]="['..', nextEpisode]">Next Episode >> </a>
+    </div>
+  </div>
+</div>

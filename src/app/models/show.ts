@@ -24,4 +24,12 @@ export interface IShow {
   };
   summary?: string;
   updated?: number;
+  _links?: {
+    nextepisode: {
+      href: string;
+    }
+    previousepisode: {
+      href: string;
+    };
+  };
 }

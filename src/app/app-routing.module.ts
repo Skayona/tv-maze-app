@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ShowPageComponent } from './show-page/show-page.component';
-import { SeasonPageComponent } from './season-page/season-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { EpisodePageComponent } from './episode-page/episode-page.component';
@@ -46,20 +45,14 @@ const routes: Routes = [{
       data: {
         breadcrumbs: 'Episodes'
       }
-    }, {
-      path: 'season/:seasonId',
-      component: SeasonPageComponent,
-      data: {
-        breadcrumbs: 'Season'
-      }
-    }, {
-      path: 'episode/:episodeId',
-      component: EpisodePageComponent,
-      data: {
-        breadcrumbs: 'Episode'
-      }
     }
   ]
+}, {
+  path: 'episode/:episodeId',
+  component: EpisodePageComponent,
+  data: {
+    breadcrumbs: 'Episode'
+  }
 }];
 
 @NgModule({

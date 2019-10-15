@@ -1,0 +1,15 @@
+<div class="show">
+  <p-card>
+    <div class="about">
+      <div><img [src]="image" [alt]="name" /></div>
+      <div [innerHTML]="summary"></div>
+    </div>
+  </p-card>
+
+  <p-card>
+    <div class="info">
+      <h3>{{ title }}</h3>
+      <ng-content></ng-content>
+    </div>
+  </p-card>
+</div>

@@ -1,5 +1,5 @@
 <p-card *ngFor="let season of seasonsList$ | async">
-  <h2><a [routerLink]="['..', 'season', '1']" routerLinkActive="router-link-active" >Season: {{ season }}</a></h2>
+  <h2>Season: {{ season }}</h2>
 
   <app-episode-list
     [episodeList]="getEpisodesInSeason(season)"
