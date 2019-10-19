@@ -1,7 +1,0 @@
-<p-card *ngFor="let season of seasonsList$ | async">
-  <h2>Season: {{ season }}</h2>
-
-  <app-episode-list
-    [episodeList]="getEpisodesInSeason(season)"
-  ></app-episode-list>
-</p-card>

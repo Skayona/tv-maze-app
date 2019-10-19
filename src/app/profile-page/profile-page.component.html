@@ -1,0 +1,14 @@
+<div class="container">
+  <p-card>
+    <div class="profile" *ngIf="(user$ | async) as user">
+      <div>
+        <img [src]="user.picture" [alt]="user.name" />
+      </div>
+      <div >
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <p><strong>Nickname:</strong> {{ user.nickname }}</p>
+        <p><strong>Email: </strong> <a [href]="user.email">{{ user.email }}</a></p>
+      </div>
+    </div>
+  </p-card>
+</div>

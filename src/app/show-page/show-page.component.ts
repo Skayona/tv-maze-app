@@ -1,10 +1,10 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { IShow } from '../models/show';
-import { TvMazeService } from 'src/services/tv-maze.service';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap, tap } from 'rxjs/operators';
 import { MenuItem } from 'primeng/api';
+import { TvMazeService } from '../services/tv-maze.service';
 
 @Injectable()
 export class ShowService {
@@ -37,8 +37,8 @@ export class ShowPageComponent implements OnInit {
     private showService: ShowService
   ) {
     this.menuItems = [
-      {label: 'Main', routerLink: 'main'},
-      {label: 'Episodes', routerLink: 'episodes'}
+      { label: 'info', routerLink: 'info' },
+      { label: 'Seasons', routerLink: 'seasons' },
     ];
 
     this.show$ = activatedRoute.params.pipe(

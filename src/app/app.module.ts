@@ -19,11 +19,14 @@ import { ShowItemComponent } from './show-item/show-item.component';
 import { ShowPageComponent } from './show-page/show-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
-import { EpisodePageComponent } from './episode-page/episode-page.component';
-import { EpisodesPageComponent } from './episodes-page/episodes-page.component';
+import { SeasonPageComponent } from './season-page/season-page.component';
 import { MainShowInfoComponent } from './main-show-info/main-show-info.component';
 import { EpisodeListComponent } from './episode-list/episode-list.component';
 import { InfoCardComponent } from './info-card/info-card.component';
+import { SeasonsPageComponent } from './seasons-page/seasons-page.component';
+import { AuthPageComponent } from './auth-page/auth-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { SeasonItemComponent } from './season-item/season-item.component';
 
 
 
@@ -39,11 +42,15 @@ import { InfoCardComponent } from './info-card/info-card.component';
     ShowPageComponent,
     LoginPageComponent,
     UserPageComponent,
-    EpisodePageComponent,
-    EpisodesPageComponent,
+    SeasonPageComponent,
     MainShowInfoComponent,
     EpisodeListComponent,
     InfoCardComponent,
+    SeasonsPageComponent,
+    AuthPageComponent,
+    ProfilePageComponent,
+    SeasonPageComponent,
+    SeasonItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,7 @@ import { InfoCardComponent } from './info-card/info-card.component';
     ButtonModule,
     CardModule,
     TabMenuModule,
-    TableModule
+    TableModule,
   ],
   exports: [],
   providers: [],

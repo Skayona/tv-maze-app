@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TvMazeService } from 'src/services/tv-maze.service';
+import { TvMazeService } from '../services/tv-maze.service';
 import { Observable } from 'rxjs';
 import { IScheduledShow } from '../models/schedule-show';
 import { IShow } from '../models/show';

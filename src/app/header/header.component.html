@@ -13,8 +13,23 @@
       </div>
 
       <div class="login">
-        <a [routerLink]="['login']">Login</a>
-        <!-- <a [routerLink]="['user']">Cabinet</a> -->
+        <a [routerLink]="['./profile']" style="margin-right: 16px;" *ngIf="auth.loggedIn">Profile</a>
+        <button
+          pButton
+          type="button"
+          (click)="auth.login()"
+          *ngIf="!auth.loggedIn"
+          icon="pi pi-sign-in" iconPos="right"
+          label="Login"
+        ></button>
+        <button
+          pButton
+          type="button"
+          (click)="auth.logout()"
+          *ngIf="auth.loggedIn"
+          icon="pi pi-sign-out" iconPos="right"
+          label="Log out"
+        ></button>
       </div>
     </div>
   </div>

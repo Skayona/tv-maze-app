@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { TvMazeService } from 'src/services/tv-maze.service';
 import { ShowService } from '../show-page/show-page.component';
 import { Observable } from 'rxjs';
 import { IEpisode } from '../models/episode';
 import { switchMap, map, tap } from 'rxjs/operators';
+import { TvMazeService } from '../services/tv-maze.service';
 
 @Component({
-  selector: 'app-episodes-page',
-  templateUrl: './episodes-page.component.html',
-  styleUrls: ['./episodes-page.component.scss']
+  selector: 'app-season-page',
+  templateUrl: './season-page.component.html',
+  styleUrls: ['./season-page.component.scss']
 })
-export class EpisodesPageComponent implements OnInit {
+export class SeasonPageComponent implements OnInit {
   episodes$: Observable<IEpisode[]>;
   seasonsList$: Observable<number[]>;
 
@@ -40,4 +40,5 @@ export class EpisodesPageComponent implements OnInit {
   }
 
   ngOnInit() { }
+
 }

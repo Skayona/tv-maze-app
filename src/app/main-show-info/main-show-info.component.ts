@@ -1,7 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { IShow } from '../models/show';
-import { TvMazeService } from 'src/services/tv-maze.service';
+import { TvMazeService } from '../services/tv-maze.service';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { ShowService } from '../show-page/show-page.component';
