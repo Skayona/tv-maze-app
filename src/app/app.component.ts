@@ -11,6 +11,8 @@ export class AppComponent implements OnInit {
     private auth: AuthService
   ) {}
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.auth.localAuthSetup();
+  }
 
 }
