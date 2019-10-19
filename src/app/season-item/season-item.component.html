@@ -1,7 +1,7 @@
 <p-card>
   <div class="season">
     <div>
-      <img [src]="season.image || './assets/no-img.png'" [alt]="season.number" />
+      <img [src]="season.image?.medium || './assets/no-img.png'" [alt]="season.number" />
     </div>
     <div>
       <h2>Season numer: {{ season.number }}</h2>

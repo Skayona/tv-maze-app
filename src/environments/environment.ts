@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  API: 'http://api.tvmaze.com'
+  API: 'http://api.tvmaze.com',
+  domain: 'dev-bq54p1vd.auth0.com',
+  clientId: 'A3pS4rEHf2jRI7X1gmkJpB0b4pzj6xKu'
 };
 
 /*
