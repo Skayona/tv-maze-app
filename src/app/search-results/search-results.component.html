@@ -1,0 +1,19 @@
+<div class="search-result">
+  <h4>Search results:</h4>
+  <p *ngIf="!searchResult.length">no results :(</p>
+  <div *ngIf="searchResult.length">
+    <ul>
+      <li *ngFor="let show of searchResult" class="search-item">
+        <a [routerLink]="['show', show.id]" (click)="clearSearchResults()">
+          <img [src]="show.image?.medium" [alt]="show.name" />
+          <div class="content">
+            <h5>{{ show?.name }}</h5>
+            <div [innerHTML]="show.summary || 'no summary'"></div>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <a [routerLink]="['search-results']" [queryParams]="{ query: query }" (click)="clearSearchResults()">Show more...</a>
+  </div>
+</div>

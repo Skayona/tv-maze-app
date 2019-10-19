@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ISeason } from '../models/season';
 
 @Component({
   selector: 'app-season-item',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./season-item.component.scss']
 })
 export class SeasonItemComponent implements OnInit {
+  @Input() season: ISeason;
 
   constructor() { }
 

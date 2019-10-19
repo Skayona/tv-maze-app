@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,9 @@ import { SeasonsPageComponent } from './seasons-page/seasons-page.component';
 import { AuthPageComponent } from './auth-page/auth-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { SeasonItemComponent } from './season-item/season-item.component';
+import { EpisodePageComponent } from './episode-page/episode-page.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 
 
@@ -51,6 +55,9 @@ import { SeasonItemComponent } from './season-item/season-item.component';
     ProfilePageComponent,
     SeasonPageComponent,
     SeasonItemComponent,
+    EpisodePageComponent,
+    SearchResultsComponent,
+    SearchPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +67,7 @@ import { SeasonItemComponent } from './season-item/season-item.component';
     CardModule,
     TabMenuModule,
     TableModule,
+    FormsModule,
   ],
   exports: [],
   providers: [],

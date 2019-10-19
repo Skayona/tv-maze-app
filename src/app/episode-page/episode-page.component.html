@@ -1,12 +1,12 @@
 <div class="container">
   <div class="show">
-    <h2>{{ show?.name }}</h2>
+    <h2>Episode</h2>
 
     <app-info-card
       *ngIf="episode"
       [image]="episode?.image?.medium || 'assets/no-img.png'"
       [name]="episode.name"
-      [summary]="episode.summary"
+      [summary]="episode.summary || 'no summary'"
       [title]="'Episode info'"
     >
       <p><strong>Name:</strong> {{ episode.name }} </p>

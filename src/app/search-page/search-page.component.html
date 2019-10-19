@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Search results</h2>
+  <div class="show-list" *ngIf="(searchResults$ | async) as searchResults">
+    <app-show-item *ngFor="let show of searchResults"
+      [show]="show"
+    ></app-show-item>
+    <p *ngIf="!searchResults.length">No shows</p>
+  </div>
+</div>

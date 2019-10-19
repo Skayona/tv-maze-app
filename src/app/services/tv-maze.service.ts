@@ -7,6 +7,7 @@ import { map, find } from 'rxjs/operators';
 import { IShow } from 'src/app/models/show';
 import { IEpisode } from 'src/app/models/episode';
 import { ISeason } from '../models/season';
+import { ISearchResult } from '../models/search-result';
 
 @Injectable({
   providedIn: 'root'
@@ -54,5 +55,9 @@ export class TvMazeService {
 
   getEpisode(episodeId: number): Observable<IEpisode> {
     return this.http.get<IEpisode>(`${ this.api }/episodes/${ episodeId }?embed=show`);
+  }
+
+  getShowsFromSearch(query: string): Observable<ISearchResult[]> {
+    return this.http.get<ISearchResult[]>(`${ this.api }/search/shows?q=${ query }`);
   }
 }

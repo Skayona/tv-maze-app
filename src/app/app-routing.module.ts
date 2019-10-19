@@ -10,6 +10,8 @@ import { AuthPageComponent } from './auth-page/auth-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { AuthGuard } from './guards/auth.guard';
 import { SeasonPageComponent } from './season-page/season-page.component';
+import { EpisodePageComponent } from './episode-page/episode-page.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 
 
@@ -24,6 +26,9 @@ const routes: Routes = [{
     path: 'user',
     component: UserPageComponent,
   }, {
+    path: 'search-results',
+    component: SearchPageComponent,
+  }, {
     path: 'show/:showId',
     component: ShowPageComponent,
     children: [
@@ -37,18 +42,12 @@ const routes: Routes = [{
       }, {
         path: 'seasons',
         component: SeasonsPageComponent,
-        children: [
-          {
-            path: ':seasonId',
-            component: SeasonPageComponent,
-            children: [
-              {
-                path: 'episode/:episodeId',
-                component: SeasonPageComponent,
-              }
-            ]
-          }
-        ]
+      }, {
+        path: 'season/:seasonId',
+        component: SeasonPageComponent,
+      }, {
+        path: 'episode/:episodeId',
+        component: EpisodePageComponent,
       }
     ]
   }, {

@@ -1,7 +1,7 @@
-<p-card *ngIf="(season$ | async) as season">
-    <h2>Season: {{ season }}</h2>
+<p-card *ngIf="(episodesList$ | async) as episodesList">
+    <h2>Season: {{ episodesList[0]?.season || '-' }}</h2>
 
     <app-episode-list
-      [episodeList]="getEpisodesInSeason(season.id)"
+      [episodeList]="episodesList"
     ></app-episode-list>
   </p-card>

@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { IEpisode } from '../models/episode';
-import { TvMazeService } from 'src/services/tv-maze.service';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap, tap, pluck } from 'rxjs/operators';
 import { IShow } from '../models/show';
+import { TvMazeService } from '../services/tv-maze.service';
 
 @Component({
   selector: 'app-episode-page',
@@ -24,6 +24,7 @@ export class EpisodePageComponent implements OnInit, OnDestroy {
     private tvMazeService: TvMazeService,
     private activatedRoute: ActivatedRoute,
   ) {
+    activatedRoute.params.subscribe(console.log);
     this.episode$ = activatedRoute.params.pipe(
       switchMap(({ episodeId }) => tvMazeService.getEpisode(episodeId))
     );

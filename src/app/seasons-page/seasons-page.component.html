@@ -1,1 +1,4 @@
-<p>seasons-page works!</p>
+<app-season-item
+  *ngFor="let season of seasonsList$ | async"
+  [season]="season"
+></app-season-item>

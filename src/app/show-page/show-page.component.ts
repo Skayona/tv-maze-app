@@ -38,7 +38,7 @@ export class ShowPageComponent implements OnInit {
   ) {
     this.menuItems = [
       { label: 'info', routerLink: 'info' },
-      { label: 'Seasons', routerLink: 'seasons' },
+      { label: 'Seasons', routerLink: ['seasons'] },
     ];
 
     this.show$ = activatedRoute.params.pipe(

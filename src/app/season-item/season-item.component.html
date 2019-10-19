@@ -1,1 +1,18 @@
-<p>season-item works!</p>
+<p-card>
+  <div class="season">
+    <div>
+      <img [src]="season.image || './assets/no-img.png'" [alt]="season.number" />
+    </div>
+    <div>
+      <h2>Season numer: {{ season.number }}</h2>
+      <p><a [routerLink]="['..', 'season', season.id]" >Show all episodes >>> </a></p>
+      <br />
+      <p><strong>Name: </strong> {{ season.name || '-' }}</p>
+      <p><strong>Premiere date: </strong> {{ season.premiereDate | date: 'dd.MM.yyyy'}}</p>
+      <p><strong>Summary: </strong></p>
+      <div [innerHTML]="season.summary || 'no summary'"></div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</p-card>

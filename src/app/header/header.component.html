@@ -7,8 +7,15 @@
 
       <div class="search">
         <div class="ui-inputgroup">
-          <input type="text" pInputText placeholder="Search shows">
-          <button pButton type="button" icon="pi pi-search" class="ui-button-warn"></button>
+          <input [(ngModel)]="query" type="text" pInputText placeholder="Search shows by name">
+          <button pButton type="button" icon="pi pi-search" class="ui-button-warn" (click)="searchShows()"></button>
+        </div>
+        <div class="search-result" *ngIf="showSearchResults">
+          <app-search-results
+            [searchResult]="searchResult"
+            [query]="query"
+            (clearResults)="clearSearchResults()"
+          ></app-search-results>
         </div>
       </div>
 

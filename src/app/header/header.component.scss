@@ -23,12 +23,21 @@ header {
 }
 
 .search {
+  position: relative;
   grid-area: search;
 
-  .ui-inputgroup {
+  .ui-inputgroup,
+  .search-result {
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .search-result {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
   }
 
   input {
