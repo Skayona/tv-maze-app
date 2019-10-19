@@ -10,4 +10,5 @@ export interface ISeason {
     medium: string;
     original: string;
   };
+  summary: string;
 }
