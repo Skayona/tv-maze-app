@@ -11,26 +11,27 @@ import {CardModule} from 'primeng/card';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {TableModule} from 'primeng/table';
 
-import { MainPageComponent } from './main-page/main-page.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { ScheduleShowComponent } from './schedule-show/schedule-show.component';
-import { RecomendedShowComponent } from './recomended-show/recomended-show.component';
-import { ShowItemComponent } from './show-item/show-item.component';
-import { ShowPageComponent } from './show-page/show-page.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { UserPageComponent } from './user-page/user-page.component';
-import { SeasonPageComponent } from './season-page/season-page.component';
-import { MainShowInfoComponent } from './main-show-info/main-show-info.component';
-import { EpisodeListComponent } from './episode-list/episode-list.component';
-import { InfoCardComponent } from './info-card/info-card.component';
-import { SeasonsPageComponent } from './seasons-page/seasons-page.component';
-import { AuthPageComponent } from './auth-page/auth-page.component';
-import { ProfilePageComponent } from './profile-page/profile-page.component';
-import { SeasonItemComponent } from './season-item/season-item.component';
-import { EpisodePageComponent } from './episode-page/episode-page.component';
-import { SearchResultsComponent } from './search-results/search-results.component';
-import { SearchPageComponent } from './search-page/search-page.component';
+import { MainPageComponent } from '@pages/main-page/main-page.component';
+import { ShowPageComponent } from '@pages/show-page/show-page.component';
+import { UserPageComponent } from '@pages/user-page/user-page.component';
+import { SeasonPageComponent } from '@pages/season-page/season-page.component';
+import { ProfilePageComponent } from '@pages/profile-page/profile-page.component';
+import { EpisodePageComponent } from '@pages/episode-page/episode-page.component';
+import { SeasonsPageComponent } from '@pages/seasons-page/seasons-page.component';
+import { AuthPageComponent } from '@pages/auth-page/auth-page.component';
+import { SearchPageComponent } from '@pages/search-page/search-page.component';
+
+import { HeaderComponent } from '@components/header/header.component';
+import { FooterComponent } from '@components/footer/footer.component';
+import { ScheduleShowComponent } from '@components/schedule-show/schedule-show.component';
+import { RecomendedShowComponent } from '@components/recomended-show/recomended-show.component';
+import { ShowItemComponent } from '@components/show-item/show-item.component';
+import { MainShowInfoComponent } from '@components/main-show-info/main-show-info.component';
+import { EpisodeListComponent } from '@components/episode-list/episode-list.component';
+import { InfoCardComponent } from '@components/info-card/info-card.component';
+import { SeasonItemComponent } from '@components/season-item/season-item.component';
+import { SearchResultsComponent } from '@components/search-results/search-results.component';
+
 
 
 
@@ -38,26 +39,24 @@ import { SearchPageComponent } from './search-page/search-page.component';
   declarations: [
     AppComponent,
     MainPageComponent,
+    ShowPageComponent,
+    UserPageComponent,
+    SeasonPageComponent,
+    ProfilePageComponent,
+    EpisodePageComponent,
+    SeasonsPageComponent,
+    AuthPageComponent,
+    SearchPageComponent,
     HeaderComponent,
     FooterComponent,
     ScheduleShowComponent,
     RecomendedShowComponent,
     ShowItemComponent,
-    ShowPageComponent,
-    LoginPageComponent,
-    UserPageComponent,
-    SeasonPageComponent,
     MainShowInfoComponent,
     EpisodeListComponent,
     InfoCardComponent,
-    SeasonsPageComponent,
-    AuthPageComponent,
-    ProfilePageComponent,
-    SeasonPageComponent,
     SeasonItemComponent,
-    EpisodePageComponent,
     SearchResultsComponent,
-    SearchPageComponent,
   ],
   imports: [
     BrowserModule,

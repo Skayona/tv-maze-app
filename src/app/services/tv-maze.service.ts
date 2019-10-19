@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-import { IScheduledShow } from 'src/app/models/schedule-show';
 import { Observable } from 'rxjs';
-import { map, find } from 'rxjs/operators';
-import { IShow } from 'src/app/models/show';
-import { IEpisode } from 'src/app/models/episode';
-import { ISeason } from '../models/season';
-import { ISearchResult } from '../models/search-result';
+import { map } from 'rxjs/operators';
+import { IScheduledShow } from '@models/schedule-show';
+import { IShow } from '@models/show';
+import { ISeason } from '@models/season';
+import { IEpisode } from '@models/episode';
+import { ISearchResult } from '@models/search-result';
+import { environment } from 'environments/environment';
 
 @Injectable({
   providedIn: 'root'
